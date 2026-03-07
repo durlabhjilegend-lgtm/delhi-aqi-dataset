@@ -1,5 +1,8 @@
 name: AQI Data Collector
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "*/10 * * * *"
