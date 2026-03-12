@@ -1,4 +1,4 @@
-# 🌍 AtmosIntel – Hyper‑Local AQI Intelligence Platform
+**AtmosIntel – Hyper‑Local AQI Intelligence Platform**
 
 ## Overview
 **AtmosIntel** is a hyper‑local air quality intelligence system designed to convert sparse monitoring station data into **ward‑level pollution insights**. The platform uses spatial interpolation and environmental analytics to generate **real‑time pollution heatmaps**, identify high‑risk zones, and produce automated advisories for citizens and government authorities.
@@ -7,7 +7,7 @@ The goal is to enable **data‑driven urban pollution management** by transformi
 
 ---
 
-## 🚨 Problem Statement
+**--> Problem Statement**
 
 Urban air quality monitoring relies on a **limited number of monitoring stations**, which often represent large geographic regions. This creates blind spots where localized pollution sources remain undetected.
 
@@ -25,7 +25,7 @@ This makes it difficult for authorities to:
 
 ---
 
-## 💡 Proposed Solution
+**--> Proposed Solution**
 
 AtmosIntel addresses this problem by generating a **continuous air‑quality surface across the city** using spatial interpolation techniques.
 
@@ -40,37 +40,37 @@ The system:
 
 ---
 
-## ⚙️ Key Features
+**--> Key Features**
 
-### 📍 Hyper‑Local AQI Mapping
+### 1. Hyper‑Local AQI Mapping
 Transforms sparse station data into a **continuous pollution heatmap** across the city.
 
-### 🏙 Ward‑Level Air Quality Intelligence
+### 2. Ward‑Level Air Quality Intelligence
 Estimates AQI values for **every administrative ward**.
 
-### 🔎 Pollution Hotspot Detection
+### 3. Pollution Hotspot Detection
 Identifies the **most polluted wards requiring immediate action**.
 
-### 🧑‍⚕️ Automated Citizen Advisories
+### 4. Automated Citizen Advisories
 Generates health guidance such as:
 
 - Wear masks  
 - Avoid outdoor activity  
 - Limit exposure for sensitive groups  
 
-### 🏛 Government Mitigation Recommendations
+### 5. Government Mitigation Recommendations
 Provides suggested actions such as:
 
 - Deploy dust suppression vehicles  
 - Investigate pollution sources  
 - Increase environmental monitoring  
 
-### 📊 Priority Action List
+### 6. Priority Action List
 Automatically ranks the **top polluted wards requiring intervention**.
 
 ---
 
-## 🏗 System Architecture
+**--> System Architecture**
 
 ```
 AQI Monitoring Stations
@@ -90,7 +90,7 @@ Interactive Monitoring Dashboard
 
 ---
 
-## 🧰 Technology Stack
+**--> Technology Stack**
 
 | Component | Technology |
 |--------|--------|
@@ -103,7 +103,7 @@ Interactive Monitoring Dashboard
 
 ---
 
-## 📁 Repository Structure
+** --> Repository Structure**
 
 ```
 delhi-aqi-dataset
@@ -119,7 +119,7 @@ delhi-aqi-dataset
 
 ---
 
-## ▶️ How to Run the Project
+**How to Run the Project**
 
 ### 1️⃣ Open the Notebook
 
@@ -145,7 +145,7 @@ AtmosIntel_dashboard.html
 
 ---
 
-## 📊 Dashboard Capabilities
+**Dashboard Capabilities**
 
 The generated dashboard allows users to:
 
@@ -157,7 +157,7 @@ The generated dashboard allows users to:
 
 ---
 
-## 🚀 Future Improvements
+**Future Improvements**
 
 Potential future enhancements include:
 
@@ -169,7 +169,7 @@ Potential future enhancements include:
 
 ---
 
-## 🌱 Impact
+**Impact**
 
 AtmosIntel demonstrates how environmental data can be transformed into **actionable intelligence for urban governance**.
 
@@ -187,9 +187,9 @@ Potential benefits include:
 Developed by:
 
 - **Durlabh Biswas**
-- **Shreyan Porel**
 - **Ayush Kumar**
+- **Shreyan Porel**
 - **Vivyaan Ojha**
 ---
 
-⭐ Explore the notebook and dashboard to see how AtmosIntel converts raw AQI data into hyper‑local pollution intelligence.
+Explore the notebook and dashboard to see how AtmosIntel converts raw AQI data into hyper‑local pollution intelligence.
