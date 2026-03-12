@@ -112,7 +112,7 @@ delhi-aqi-dataset
 ├── delhi_wards.geojson
 ├── AtmosIntel_MVP.ipynb
 ├── AtmosIntel_dashboard.html
-├── priority_wards.csv
+├── priority_wards.csv(created in the colab notebook)
 ├── aqi_collector.py
 └── .github/workflows/
 ```
