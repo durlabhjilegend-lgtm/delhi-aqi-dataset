@@ -1,4 +1,3 @@
-# delhi-aqi-dataset
 # 🌍 AtmosIntel – Hyper‑Local AQI Intelligence Platform
 
 ## Overview
@@ -8,7 +7,7 @@ The goal is to enable **data‑driven urban pollution management** by transformi
 
 ---
 
-# 🚨 Problem Statement
+## 🚨 Problem Statement
 
 Urban air quality monitoring relies on a **limited number of monitoring stations**, which often represent large geographic regions. This creates blind spots where localized pollution sources remain undetected.
 
@@ -19,29 +18,29 @@ For example:
 
 This makes it difficult for authorities to:
 
-- Detect pollution hotspots early
-- Identify pollution sources
-- Issue localized health advisories
-- Deploy mitigation resources efficiently
+- Detect pollution hotspots early  
+- Identify pollution sources  
+- Issue localized health advisories  
+- Deploy mitigation resources efficiently  
 
 ---
 
-# 💡 Proposed Solution
+## 💡 Proposed Solution
 
 AtmosIntel addresses this problem by generating a **continuous air‑quality surface across the city** using spatial interpolation techniques.
 
 The system:
 
-1. Collects real‑time AQI data from monitoring stations
-2. Uses **Inverse Distance Weighting (IDW) interpolation with KDTree optimization**
-3. Estimates pollution levels across the city
-4. Aggregates AQI values at the **ward level**
-5. Generates **citizen advisories and government mitigation recommendations**
+1. Collects real‑time AQI data from monitoring stations  
+2. Uses **Inverse Distance Weighting (IDW) interpolation with KDTree optimization**  
+3. Estimates pollution levels across the city  
+4. Aggregates AQI values at the **ward level**  
+5. Generates **citizen advisories and government mitigation recommendations**  
 6. Produces an **interactive geospatial dashboard**
 
 ---
 
-# ⚙️ Key Features
+## ⚙️ Key Features
 
 ### 📍 Hyper‑Local AQI Mapping
 Transforms sparse station data into a **continuous pollution heatmap** across the city.
@@ -55,38 +54,43 @@ Identifies the **most polluted wards requiring immediate action**.
 ### 🧑‍⚕️ Automated Citizen Advisories
 Generates health guidance such as:
 
-- Wear masks
-- Avoid outdoor activity
-- Limit exposure for sensitive groups
+- Wear masks  
+- Avoid outdoor activity  
+- Limit exposure for sensitive groups  
 
 ### 🏛 Government Mitigation Recommendations
 Provides suggested actions such as:
 
-- Deploy dust suppression vehicles
-- Investigate pollution sources
-- Increase environmental monitoring
+- Deploy dust suppression vehicles  
+- Investigate pollution sources  
+- Increase environmental monitoring  
 
 ### 📊 Priority Action List
 Automatically ranks the **top polluted wards requiring intervention**.
 
 ---
+
+## 🏗 System Architecture
+
+```
 AQI Monitoring Stations
-↓
+        ↓
 Real‑Time Data Collection (GitHub Dataset)
-↓
+        ↓
 Spatial Interpolation Model (IDW + KDTree)
-↓
+        ↓
 City‑Wide Pollution Surface
-↓
+        ↓
 Ward‑Level AQI Aggregation
-↓
+        ↓
 Advisory & Decision Engine
-↓
+        ↓
 Interactive Monitoring Dashboard
+```
 
 ---
 
-# 🧰 Technology Stack
+## 🧰 Technology Stack
 
 | Component | Technology |
 |--------|--------|
@@ -99,7 +103,9 @@ Interactive Monitoring Dashboard
 
 ---
 
-# 📁 Repository Structure
+## 📁 Repository Structure
+
+```
 delhi-aqi-dataset
 │
 ├── aqi_data.csv
@@ -109,11 +115,11 @@ delhi-aqi-dataset
 ├── priority_wards.csv
 ├── aqi_collector.py
 └── .github/workflows/
-
+```
 
 ---
 
-# ▶️ How to Run the Project
+## ▶️ How to Run the Project
 
 ### 1️⃣ Open the Notebook
 
@@ -123,20 +129,23 @@ Open **AtmosIntel_MVP.ipynb** in **Google Colab**.
 
 The notebook will:
 
-- Load AQI data from GitHub
-- Display monitoring stations
-- Perform spatial interpolation
-- Estimate ward‑level AQI
-- Generate advisories
+- Load AQI data from GitHub  
+- Display monitoring stations  
+- Perform spatial interpolation  
+- Estimate ward‑level AQI  
+- Generate advisories  
 
 ### 3️⃣ Generate Dashboard
 
 The notebook exports an interactive dashboard:
+
+```
 AtmosIntel_dashboard.html
+```
 
 ---
 
-# 📊 Dashboard Capabilities
+## 📊 Dashboard Capabilities
 
 The generated dashboard allows users to:
 
@@ -148,7 +157,7 @@ The generated dashboard allows users to:
 
 ---
 
-# 🚀 Future Improvements
+## 🚀 Future Improvements
 
 Potential future enhancements include:
 
@@ -160,29 +169,27 @@ Potential future enhancements include:
 
 ---
 
-# 🌱 Impact
+## 🌱 Impact
 
 AtmosIntel demonstrates how environmental data can be transformed into **actionable intelligence for urban governance**.
 
 Potential benefits include:
 
-- Early detection of pollution hotspots
-- Targeted mitigation strategies
-- Improved public health awareness
-- Data‑driven environmental policy
+- Early detection of pollution hotspots  
+- Targeted mitigation strategies  
+- Improved public health awareness  
+- Data‑driven environmental policy  
 
 ---
 
-# 👨‍💻 Authors
+## 👨‍💻 Authors
 
 Developed by:
 
-**Durlabh Biswas**  
-**Shreyan Porel**
-**Ayush Kumar**
-**Vivyaan Ojha**
+- **Durlabh Biswas**
+- **Shreyan Porel**
+- **Ayush Kumar**
+- **Vivyaan Ojha**
 ---
 
-⭐ If you found this project interesting, feel free to explore the notebook and dashboard!
-
-# 🏗 System Architecture
+⭐ Explore the notebook and dashboard to see how AtmosIntel converts raw AQI data into hyper‑local pollution intelligence.
