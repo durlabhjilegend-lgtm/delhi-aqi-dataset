@@ -1,4 +1,4 @@
-# ** AtmosIntel – Hyper‑Local AQI Intelligence Platform**
+# AtmosIntel – Hyper‑Local AQI Intelligence Platform
 
 ## Overview
 **AtmosIntel** is a hyper‑local air quality intelligence system designed to convert sparse monitoring station data into **ward‑level pollution insights**. The platform uses spatial interpolation and environmental analytics to generate **real‑time pollution heatmaps**, identify high‑risk zones, and produce automated advisories for citizens and government authorities.
