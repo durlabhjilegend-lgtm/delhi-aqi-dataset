@@ -7,7 +7,7 @@ The goal is to enable **data‑driven urban pollution management** by transformi
 
 ---
 
-**--> Problem Statement**
+# 🚨 Problem Statement
 
 Urban air quality monitoring relies on a **limited number of monitoring stations**, which often represent large geographic regions. This creates blind spots where localized pollution sources remain undetected.
 
@@ -16,57 +16,103 @@ For example:
 - Delhi has **~47 monitoring stations**
 - But contains **250+ administrative wards**
 
-This makes it difficult for authorities to:
+Because of this limitation, authorities struggle to:
 
-- Detect pollution hotspots early  
-- Identify pollution sources  
-- Issue localized health advisories  
-- Deploy mitigation resources efficiently  
+- Detect **localized pollution hotspots**
+- Identify **pollution sources early**
+- Issue **hyper-local health advisories**
+- Deploy **mitigation resources efficiently**
+
+This results in **reactive pollution management instead of proactive environmental control**. 
 
 ---
 
-**--> Proposed Solution**
+# 💡 Proposed Solution
 
 AtmosIntel addresses this problem by generating a **continuous air‑quality surface across the city** using spatial interpolation techniques.
 
-The system:
+The system pipeline works as follows: 
 
-1. Collects real‑time AQI data from monitoring stations  
-2. Uses **Inverse Distance Weighting (IDW) interpolation with KDTree optimization**  
-3. Estimates pollution levels across the city  
-4. Aggregates AQI values at the **ward level**  
-5. Generates **citizen advisories and government mitigation recommendations**  
-6. Produces an **interactive geospatial dashboard**
+1. Collect **real-time AQI measurements** from monitoring stations  
+2. Use **Inverse Distance Weighting (IDW) interpolation** to estimate pollution levels at unsampled locations  
+3. Optimize spatial queries using **KDTree nearest-neighbor search**  
+4. Generate a **city-wide pollution surface**
+5. Aggregate pollution values at the **administrative ward level**
+6. Detect **high-risk pollution zones**
+7. Generate **automated citizen advisories and mitigation recommendations**
+8. Display results on an **interactive geospatial dashboard**
 
 ---
 
-**--> Key Features**
+# 🧠 Core Technical Idea
 
-### 1. Hyper‑Local AQI Mapping
-Transforms sparse station data into a **continuous pollution heatmap** across the city.
+### Inverse Distance Weighting (IDW)
 
-### 2. Ward‑Level Air Quality Intelligence
-Estimates AQI values for **every administrative ward**.
+IDW is a spatial interpolation technique that estimates pollution levels at unknown locations by **weighting nearby monitoring stations inversely to their distance**.
 
-### 3. Pollution Hotspot Detection
-Identifies the **most polluted wards requiring immediate action**.
+Points closer to a monitoring station influence the prediction more than distant stations.
 
-### 4. Automated Citizen Advisories
-Generates health guidance such as:
+Mathematically:
+AQI(x) = Σ (AQI_i / d_i^p) / Σ (1 / d_i^p)
 
-- Wear masks  
-- Avoid outdoor activity  
-- Limit exposure for sensitive groups  
+Where:
 
-### 5. Government Mitigation Recommendations
-Provides suggested actions such as:
+- `AQI_i` = AQI value of station i  
+- `d_i` = distance to station i  
+- `p` = power parameter controlling influence decay  
 
-- Deploy dust suppression vehicles  
-- Investigate pollution sources  
-- Increase environmental monitoring  
+---
 
-### 6. Priority Action List
-Automatically ranks the **top polluted wards requiring intervention**.
+### KDTree Optimization
+
+Spatial interpolation requires frequent **nearest-neighbor searches**.
+
+Using **KDTree spatial indexing** from SciPy significantly improves performance by reducing search complexity from:
+O(n²) → approximately O(n log n)
+
+This enables **fast interpolation across hundreds of ward locations**.
+
+# ✨ Key Features
+
+## 1️⃣ Hyper-Local AQI Mapping
+Transforms sparse station data into a **continuous pollution heatmap across the entire city**.
+
+---
+
+## 2️⃣ Ward-Level Air Quality Intelligence
+Estimates AQI values for **each administrative ward**, enabling localized environmental insights.
+
+---
+
+## 3️⃣ Pollution Hotspot Detection
+Automatically identifies the **most polluted wards requiring immediate attention**.
+
+---
+
+## 4️⃣ Automated Citizen Advisories
+
+The system generates **health recommendations** such as:
+
+- Wear protective masks
+- Avoid outdoor physical activity
+- Limit exposure for vulnerable populations
+
+---
+
+## 5️⃣ Government Mitigation Recommendations
+
+AtmosIntel suggests possible mitigation actions such as:
+
+- Deploy **dust suppression vehicles**
+- Inspect **construction zones**
+- Investigate **local pollution sources**
+- Increase **environmental monitoring**
+
+---
+
+## 6️⃣ Priority Action List
+
+The system produces a ranked list of **top polluted wards** to help authorities **prioritize interventions efficiently**.
 
 ---
 
@@ -90,19 +136,32 @@ Interactive Monitoring Dashboard
 
 ---
 
-**--> Technology Stack**
+# 🛠 Technology Stack
 
 | Component | Technology |
 |--------|--------|
-| Data Processing | Python, Pandas, NumPy |
+| Programming Language | Python |
+| Data Processing | Pandas, NumPy |
 | Geospatial Analysis | GeoPandas, Shapely |
 | Spatial Modeling | SciPy KDTree, IDW Interpolation |
 | Visualization | Folium |
 | Data Pipeline | GitHub Actions |
-| Development | Google Colab |
+| Development Environment | Google Colab |
 
 ---
 
+# 📊 Dashboard Preview
+*(Screenshots will be inserted here)*
+
+### AQI Heatmap
+
+
+### Ward-Level Pollution Visualization
+
+
+### Monitoring Station Map
+
+---
 ** --> Repository Structure**
 
 ```
@@ -119,7 +178,26 @@ delhi-aqi-dataset
 
 ---
 
-**How to Run the Project**
+# 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/durlabhjilegend-lgtm/AtmosIntel.git
+cd AtmosIntel
+```
+
+Install dependencies:
+```bash
+pip install pandas numpy geopandas shapely scipy folium
+```
+
+Or install using requirements file:
+```
+pip install -r requirements.txt
+```
+
+# ▶️ How to Run the Project
 
 ### 1️⃣ Open the Notebook
 
@@ -157,19 +235,36 @@ The generated dashboard allows users to:
 
 ---
 
-**Future Improvements**
+# 📊 Data Source
 
-Potential future enhancements include:
+AQI data is collected from urban air quality monitoring stations.
+
+The dataset includes:
+
+- Monitoring station name
+- Latitude
+- Longitude
+- AQI value
+
+Administrative boundaries are provided via:
+```
+delhi_wards.geojson
+```
+
+# 🚀 Future Improvements
+
+Planned improvements include:
 
 - Real‑time pollutant monitoring (PM2.5, PM10, NO₂, SO₂)
 - Machine learning based **pollution source detection**
 - Wind‑driven pollution trajectory analysis
 - Automated alert notification systems
-- Smart city command center integration
+- Integration with smart city command centers
+- Time-series pollution forecasting
 
 ---
 
-**Impact**
+# 🌱 Impact
 
 AtmosIntel demonstrates how environmental data can be transformed into **actionable intelligence for urban governance**.
 
@@ -182,7 +277,7 @@ Potential benefits include:
 
 ---
 
-## 👨‍💻 Authors
+# 👨‍💻 Authors
 
 Developed by:
 
